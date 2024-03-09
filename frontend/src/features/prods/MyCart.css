@@ -1,0 +1,38 @@
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .cart-container {
+    position: absolute;
+    top: 60px;
+    right: 5px;
+    width: 500px;
+    padding: 5px 20px 15px 20px;
+  }
+  
+  .product-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .product-info img {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+  }
+  
+  .product-details {
+    margin-left: 20px;
+  }
+  
+  .price-controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  .each-price {
+    margin-right: 10px;
+  }
+  

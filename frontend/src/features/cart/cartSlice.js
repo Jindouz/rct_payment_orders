@@ -2,6 +2,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { addOrder } from './cartAPI';
 
 
+
 const initialCartState = {
     cartVisible: false,
     shoppingData: !!localStorage.getItem('shoppingData') ? JSON.parse(localStorage.getItem('shoppingData')) : [],

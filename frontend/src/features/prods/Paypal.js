@@ -16,7 +16,7 @@ const Paypal = () => {
   
 
     const paypalOptions = {
-        'client-id': "test", // Replace with your actual PayPal client ID
+        'client-id': "AejqyUjgxZRhA_j7r2GtOXfoQFwwrcaitXZ9DNhk0PyVMTJ6sbgPmFEsjTw9iwxnuIIZBe3UV897Szho", // Replace with your actual PayPal client ID
         currency: 'USD',
       };
     
@@ -37,10 +37,10 @@ const Paypal = () => {
       const onApprove = async (data, actions) => {
         return actions.order.capture().then(function (details) {
           const paypal_ID = details.id
-          console.log('dispatching order async', user_ID, paypal_ID);
+          // console.log('dispatching order async', user_ID, paypal_ID, totalAmount);
           try
           {
-            dispatch(sendOrderAsync({ user_ID, paypal_ID }));
+            dispatch(sendOrderAsync({ user_ID, paypal_ID , totalAmount }));
           }catch(error){
             console.log(error);
           }

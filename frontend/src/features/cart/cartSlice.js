@@ -2,7 +2,6 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { addOrder } from './cartAPI';
 
 
-
 const initialCartState = {
     cartVisible: false,
     shoppingData: !!localStorage.getItem('shoppingData') ? JSON.parse(localStorage.getItem('shoppingData')) : [],
@@ -15,10 +14,10 @@ const initialCartState = {
 
 export const sendOrderAsync = createAsyncThunk(
     'cart/addOrder',
-    async ({user_ID, paypal_ID}, thunkAPI) => {
+    async ({user_ID, paypal_ID , totalAmount}, thunkAPI) => {
         const state = thunkAPI.getState();
         const sendShoppingData = state.cart.shoppingData;
-        const total_price = state.cart.totalAmount;
+        const total_price = totalAmount;
 
         // Transform the shopping data into the required format for order details
         const orderDetails = sendShoppingData.map(item => ({

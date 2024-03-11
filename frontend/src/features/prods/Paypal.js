@@ -16,7 +16,7 @@ const Paypal = () => {
   
 
     const paypalOptions = {
-        'client-id': "AejqyUjgxZRhA_j7r2GtOXfoQFwwrcaitXZ9DNhk0PyVMTJ6sbgPmFEsjTw9iwxnuIIZBe3UV897Szho", // Replace with your actual PayPal client ID
+        'client-id': "test", // Replace with your actual PayPal client ID
         currency: 'USD',
       };
     
